@@ -20,7 +20,7 @@ function minifyFolder(srcFolder, destFolder) {
     const destPath = path.join(destFolder, file);
 
     if (fs.statSync(srcPath).isDirectory()) {
-      minifyFolder(srcPath, path.join(destFolder, file));
+      minifyFolder(srcPath, destPath);
     } else if (file.endsWith(".js")) {
       minifyFile(srcPath, destPath.replace(/\.js$/, ".js"));
     }

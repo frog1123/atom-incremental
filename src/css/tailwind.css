@@ -528,14 +528,11 @@ video {
 .grid-flow-col {
   grid-auto-flow: column;
 }
-.grid-cols-\[1fr_auto_1fr\] {
-  grid-template-columns: 1fr auto 1fr;
+.grid-cols-\[max-content_auto\] {
+  grid-template-columns: max-content auto;
 }
 .grid-cols-\[max-content_max-content\] {
   grid-template-columns: max-content max-content;
-}
-.grid-cols-\[max-content_auto\] {
-  grid-template-columns: max-content auto;
 }
 .grid-rows-\[1fr_1fr\] {
   grid-template-rows: 1fr 1fr;
@@ -562,9 +559,6 @@ video {
 .bg-neutral-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity));
-}
-.p-1 {
-  padding: 0.25rem;
 }
 .p-2 {
   padding: 0.5rem;

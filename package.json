@@ -9,7 +9,7 @@
     "minify-js": "node scripts/minify-js.js",
     "minify-css": "node scripts/minify-css.js",
     "minify-html": "node scripts/minify-html.js",
-    "build": "node scripts/try-create-dist.js npm run minify-js && npm run minify-css && npm run minify-html"
+    "build": "node scripts/try-create-dist.js npm run minify-js && npm run minify-css && npm run minify-html && npm run minify-js"
   },
   "keywords": [],
   "author": "",

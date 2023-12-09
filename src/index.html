@@ -5,15 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/tailwind.css">
+  <link rel="stylesheet" type="text/css" href="css/globals.css">
+  <script src="js/core/break_eternity.min.js" defer></script>
+  <script src="js/core/player.js" defer></script>
+  <script src="js/utils/format.js" defer></script>
   <script src="js/index.js" defer></script>
+  <script src="js/core/loop.js" defer></script>
   <title>Atom Incremental</title>
 </head>
 
-<body>
+<body class="bg-neutral-950">
   <div>
-    <div class="bg-emerald-500 text-white p-4">
-      <h1 class="text-3xl font-bold">Hello, Tailwind CSS!</h1>
-      <p class="mt-2">This is a simple example.</p>
+    <div class="w-max mx-auto">
+      <div class="grid grid-flow-col place-items-center gap-1">
+        <span id="atom-count" class="text-white text-4xl font-bold">~</span>
+        <span class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-atom">
+            <circle cx="12" cy="12" r="1" />
+            <path
+              d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" />
+            <path
+              d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" />
+          </svg>
+        </span>
+      </div>
     </div>
   </div>
 </body>

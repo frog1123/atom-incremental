@@ -1,1 +1,2 @@
+renderAtomForgeUI();
 setHandleAtomForgeBuy();

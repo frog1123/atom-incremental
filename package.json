@@ -1,0 +1,24 @@
+{
+  "name": "atom-incremental",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tw": "postcss css/_tailwind.css -o css/tailwind.css --watch",
+    "minify-js": "node scripts/minify-js.js",
+    "minify-css": "node scripts/minify-css.js",
+    "minify-html": "node scripts/minify-html.js",
+    "build": "npm run minify-js && npm run minify-css && npm run minify-html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "clean-css": "^5.3.3",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "uglify-js": "^3.17.4"
+  }
+}

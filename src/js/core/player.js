@@ -15,5 +15,11 @@ let player = {
       multiplier: new Decimal("1"),
       amountBought: new Decimal("0")
     }
+  },
+  settings: {
+    uiUpdateSpeed: 20
+  },
+  devSettings: {
+    gameSpeed: 20
   }
 };

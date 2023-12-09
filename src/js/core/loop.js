@@ -1,6 +1,9 @@
 setInterval(() => {
-  player.atoms = player.atoms.add(player.atomForges.tier1.level * player.atomForges.tier1.multiplier);
+  const speed = 1000 / player.devSettings.gameSpeed;
+  player.atoms = player.atoms.add(player.atomForges.tier1.level.mul(player.atomForges.tier1.multiplier).div(speed));
+}, player.devSettings.gameSpeed);
 
+setInterval(() => {
   updateAtomCount();
   updateAtomForgeUI();
-}, 20);
+}, player.settings.uiUpdateSpeed);

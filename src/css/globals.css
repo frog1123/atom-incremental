@@ -3,3 +3,23 @@
 * {
   font-family: "Lexend Deca", sans-serif;
 }
+
+.atom-forge-enabled {
+  border-color: #10b981;
+  cursor: pointer;
+  transition-duration: 250ms;
+}
+
+.atom-forge-enabled:hover {
+  background-color: #10b98140;
+}
+
+.atom-forge-disabled {
+  border-color: #f43f5e;
+  cursor: pointer;
+  transition-duration: 250ms;
+}
+
+.atom-forge-disabled:hover {
+  background-color: #f43f5e;
+}

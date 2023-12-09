@@ -1,1 +1,4 @@
-setInterval(() => {}, 20);
+setInterval(() => {
+  updateAtomCount();
+  updateAtomForgeUI();
+}, 20);

@@ -1,5 +1,5 @@
 const setHandleAtomForgeBuy = () => {
-  for (let i = 1; i < 9; i++) {
+  for (let i = 1; i <= 9; i++) {
     const currentForgeBuyBtn = document.getElementById(`tier-${i}-atom-forge-btn`);
 
     currentForgeBuyBtn.onclick = () => handleAtomForgeBuy({ tier: i });

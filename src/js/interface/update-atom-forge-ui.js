@@ -1,5 +1,5 @@
 const updateAtomForgeUI = () => {
-  for (let i = 1; i < 9; i++) {
+  for (let i = 1; i <= 9; i++) {
     const currentForge = player.atomForges[`tier${i}`];
     const currentForgeBuyBtn = document.getElementById(`tier-${i}-atom-forge-btn`);
 

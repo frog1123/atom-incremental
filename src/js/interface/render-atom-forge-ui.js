@@ -1,9 +1,9 @@
 const renderAtomForgeUI = () => {
   const forgeContainerEl = document.getElementById("atom-forges-container");
-  for (let i = 1; i < 9; i++) {
+  for (let i = 1; i <= 9; i++) {
     forgeContainerEl.innerHTML = `${forgeContainerEl.innerHTML}
-      <div class="odd:bg-neutral-900 px-2 py-1 grid grid-cols-[1fr_auto_1fr]">
-        <div>
+      <div class="odd:bg-neutral-900 p-1 grid grid-cols-[1fr_auto_1fr]">
+        <div class="grid grid-rows-[1fr_1fr]">
           <div class="grid grid-flow-col gap-1 place-items-center w-max">
             <span class="text-gray-500">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-orbit">
@@ -14,13 +14,13 @@ const renderAtomForgeUI = () => {
                 <path d="M13.5 2.1a10 10 0 0 0-9.841 15.416" />
               </svg>
             </span>
-            <div class="bg-gray-500 p-1 rounded-md h-max">
-              <span class="block md:hidden text-black uppercase font-bold text-xs h-max">T1</span>
-              <span class="hidden md:block text-black uppercase font-bold text-xs h-max">Tier 1</span>
+            <div class="bg-gray-500 px-1 rounded-md h-max">
+              <span class="block md:hidden text-black uppercase font-bold text-xs h-max">T${i}</span>
+              <span class="hidden md:block text-black uppercase font-bold text-xs h-max">Tier ${i}</span>
             </div>
             <span class="text-white">Atom Forge</span>
             <span id="tier-${i}-atom-forge-a" class="text-white">
-              ×~ (~)
+              ~
             </span>
           </div>
           <div class="grid grid-flow-col gap-1 place-items-center w-max">
@@ -37,7 +37,11 @@ const renderAtomForgeUI = () => {
                       <path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" />
                     </svg>
                   </span>`
-                : `<span class="text-gray-500">
+                : `<div class="bg-gray-500 px-1 rounded-md h-max">
+                    <span class="block md:hidden text-black uppercase font-bold text-xs h-max">T${i - 1}</span>
+                    <span class="hidden md:block text-black uppercase font-bold text-xs h-max">Tier ${i - 1}</span>
+                  </div>
+                  <span class="text-gray-500">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-orbit">
                       <circle cx="12" cy="12" r="3" />
                       <circle cx="19" cy="5" r="2" />

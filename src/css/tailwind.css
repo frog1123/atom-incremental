@@ -492,9 +492,13 @@ video {
 .mt-2 {
   margin-top: 0.5rem;
 }
-.bg-blue-500 {
+.bg-emerald-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+}
+.bg-rose-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
 }
 .p-4 {
   padding: 1rem;

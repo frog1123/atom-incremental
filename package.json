@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tw": "postcss css/_tailwind.css -o css/tailwind.css --watch",
+    "dev": "concurrently \"live-server --port=3000 --no-browser\" \"npm run tw\"",
+    "tw": "postcss src/css/styles.css -o src/css/tailwind.css --watch",
     "minify-js": "node scripts/minify-js.js",
     "minify-css": "node scripts/minify-css.js",
     "minify-html": "node scripts/minify-html.js",
@@ -16,6 +17,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.16",
     "clean-css": "^5.3.3",
+    "concurrently": "^8.2.2",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",

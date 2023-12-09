@@ -14,9 +14,9 @@
   <title>Atom Incremental</title>
 </head>
 
-<body class="bg-neutral-950">
-  <div>
-    <div class="w-max mx-auto">
+<body class="bg-neutral-950" dir="ltr">
+  <div class="grid grid-flow-row w-full gap-2">
+    <div class="w-max mx-auto mt-2">
       <div class="grid grid-flow-col place-items-center gap-1">
         <span id="atom-count" class="text-white text-4xl font-bold">~</span>
         <span class="text-white">
@@ -30,6 +30,32 @@
               d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" />
           </svg>
         </span>
+      </div>
+    </div>
+    <div>
+      <div class="odd:bg-neutral-800 px-2 py-1 grid grid-cols-[1fr_auto_1fr]">
+        <div>
+          <span class="text-white">Tier 1 Atom Forge</span>
+        </div>
+        <div class="w-full grid place-items-center">
+          <span class="text-white">~</span>
+        </div>
+        <button class="ml-auto py-2 w-20 border-[1px] rounded-md grid place-items-center" style="border-color: gray;">
+          <div class="grid grid-cols-[max-content_max-content] gap-1 place-items-center">
+            <span class="text-white">~</span>
+            <span class="text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-atom">
+                <circle cx="12" cy="12" r="1" />
+                <path
+                  d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" />
+                <path
+                  d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" />
+              </svg>
+            </span>
+          </div>
+        </button>
       </div>
     </div>
   </div>

@@ -11,6 +11,8 @@
   <script src="js/utils/format.js" defer></script>
   <script src="js/interface/update-atom-count.js" defer></script>
   <script src="js/interface/update-atom-forge-ui.js" defer></script>
+  <script src="js/interface/handle-atom-forge-buy.js" defer></script>
+  <script src="js/core/onload.js" defer></script>
   <script src="js/core/loop.js" defer></script>
   <title>Atom Incremental</title>
 </head>
@@ -43,12 +45,12 @@
           <span id="tier-1-atom-forge-b" class="text-white">Forging ~ Atoms/s</span>
         </div>
         <div class="w-full grid place-items-center">
-          <span class="text-white">~</span>
+          <span id="tier-1-atom-forge-c" class="text-white">~</span>
         </div>
         <button id="tier-1-atom-forge-btn"
           class="ml-auto py-2 w-[150px] border-[2px] rounded-md grid place-items-center">
           <div class="grid grid-cols-[max-content_max-content] gap-1 place-items-center">
-            <span id="tier-1-atom-forge-c" class="text-white">~</span>
+            <span id="tier-1-atom-forge-btn-txt" class="text-white">~</span>
             <span class="text-white">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

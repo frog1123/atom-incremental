@@ -5,7 +5,8 @@ const updateAtomForgeUI = () => {
 
     document.getElementById(`tier-${i + 1}-atom-forge-a`).textContent = `×${fv(currentForge.multiplier)} (${currentForge.amountBought})`;
     document.getElementById(`tier-${i + 1}-atom-forge-b`).textContent = `Forging ${currentForge.level * currentForge.multiplier} Atoms/s`;
-    document.getElementById(`tier-${i + 1}-atom-forge-c`).textContent = fv(currentForge.cost);
+    document.getElementById(`tier-${i + 1}-atom-forge-c`).textContent = fvnd(currentForge.level);
+    document.getElementById(`tier-${i + 1}-atom-forge-btn-txt`).textContent = fv(currentForge.cost);
 
     if (player.atoms.gte(currentForge.cost)) {
       currentForgeBuyBtn.classList.remove("atom-forge-disabled");

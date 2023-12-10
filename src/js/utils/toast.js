@@ -3,19 +3,23 @@ const displayNewToast = (message, duration = 3000) => {
   const childToast = document.createElement("div");
 
   childToast.innerHTML = `
-  <div class="bg-neutral-900 rounded-md p-2">
-    <span>${message}</span>
-  </div>`;
+    <div class="toast-content bg-neutral-900 rounded-md p-2">
+      <span class="text-white text-center">${message}</span>
+    </div>`;
+  childToast.className = "toast-entry";
 
   toastContainer.appendChild(childToast);
 
   setTimeout(() => {
-    childToast.style.opacity = 1;
+    childToast.classList.add("toast-entered");
+  }, 0);
+
+  setTimeout(() => {
+    childToast.classList.remove("toast-entered");
+    childToast.classList.add("toast-exit");
+
     setTimeout(() => {
-      childToast.style.opacity = 0;
-      setTimeout(() => {
-        toastContainer.removeChild(childToast);
-      }, 300);
-    }, 300);
+      toastContainer.removeChild(childToast);
+    }, 100);
   }, duration);
 };

@@ -1,5 +1,5 @@
 let player = {
-  atoms: new Decimal("10"),
+  atoms: new Decimal("1e50"),
   atomForges: {
     tier1: {
       level: new Decimal("0"),

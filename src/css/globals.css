@@ -16,7 +16,7 @@
 
 .atom-forge-disabled {
   border-color: #f43f5e;
-  cursor: pointer;
+  cursor: default;
   transition-duration: 250ms;
 }
 

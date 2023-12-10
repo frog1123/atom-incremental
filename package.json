@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"live-server --port=3000 --no-browser\" \"npm run tw\"",
-    "tw": "postcss src/css/styles.css -o src/css/tailwind.css --watch",
+    "dev": "concurrently \"live-server --port=3000 --no-browser\" \"npm run tw:w\"",
+    "tw:w": "postcss src/css/styles.css -o src/css/tailwind.css --watch",
+    "tw": "postcss src/css/styles.css -o src/css/tailwind.css",
     "minify-js": "node scripts/minify-js.js",
     "minify-css": "node scripts/minify-css.js",
     "minify-html": "node scripts/minify-html.js",
-    "build": "node scripts/try-create-dist.js npm run minify-js && npm run minify-css && npm run minify-html && npm run minify-js"
+    "build": "npm run tw && node scripts/try-create-dist.js && npm run minify-js && npm run minify-css && npm run minify-html && npm run minify-js"
   },
   "keywords": [],
   "author": "",

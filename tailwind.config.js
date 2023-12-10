@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        glass: "#04060a60",
         border: "#252525"
       }
     }

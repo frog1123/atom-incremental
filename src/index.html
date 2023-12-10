@@ -6,39 +6,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/tailwind.css">
   <link rel="stylesheet" type="text/css" href="css/globals.css">
+  <!-- high priority -->
   <script src="js/core/break_eternity.min.js" defer></script>
   <script src="js/core/player.js" defer></script>
   <script src="js/utils/format.js" defer></script>
+  <!-- * -->
   <script src="js/interface/update-atom-count.js" defer></script>
   <script src="js/interface/render-atom-forge-ui.js" defer></script>
   <script src="js/interface/update-atom-forge-ui.js" defer></script>
   <script src="js/interface/handle-atom-forge-buy.js" defer></script>
+  <script src="js/interface/sidebar.js" defer></script>
+  <!-- * -->
   <script src="js/atom/run-atom-forge.js" defer></script>
   <script src="js/core/onload.js" defer></script>
   <script src="js/core/loop.js" defer></script>
+  <!-- * -->
   <title>Atom Incremental</title>
 </head>
 
 <body class="bg-neutral-950" dir="ltr">
-  <div class="grid grid-flow-row w-full gap-2">
-    <div class="w-max mx-auto mt-2">
-      <div class="grid grid-flow-col place-items-center gap-1">
-        <span id="atom-count" class="text-white text-4xl font-bold">~</span>
-        <span class="text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-atom">
-            <circle cx="12" cy="12" r="1" />
-            <path
-              d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" />
-            <path
-              d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" />
-          </svg>
-        </span>
+  <div id="page-main" class="page" style="display: block;">
+    <div class="grid grid-flow-row w-full gap-2">
+      <div class="w-max mx-auto mt-2">
+        <div class="grid grid-flow-col place-items-center gap-1">
+          <span id="atom-count" class="text-white text-4xl font-bold">~</span>
+          <span class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-atom">
+              <circle cx="12" cy="12" r="1" />
+              <path
+                d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" />
+              <path
+                d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" />
+            </svg>
+          </span>
+        </div>
       </div>
+      <div id="atom-forges-container" class="grid grid-flow-row"></div>
     </div>
-    <div id="atom-forges-container" class="grid grid-flow-row"></div>
   </div>
+  <div id="page-settings" class="page" style="display: none;">
+    <p class="text-white">you are on page 2</p>
+  </div>
+  <div id="sidebar-shown-overlay" class="absolute z-[10] top-0 left-0 w-screen h-screen" style="display: none;"></div>
+  <div id="sidebar-icon-container" class="absolute z-[20] top-0 left-0">
+    <button id="sidebar-icon-btn">
+      <span class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-menu">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </span>
+    </button>
+  </div>
+  <div id="sidebar-container"
+    class="absolute z-[20] top-0 left-0 h-screen bg-neutral-950 transition w-[80%] sm:w-[300px]">
+    <div id="sidebar-content-container">
+      <div id="sidebar-title-container">
+        <p class="text-white">menu</p>
+        <button id="sidebar-close-btn">
+          <span class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-x">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <button id="switch-to-page-main">
+        <p class="text-white">page main</p>
+      </button>
+      <button id="switch-to-page-settings">
+        <p class="text-white">settings</p>
+      </button>
+    </div>
 </body>
 
 </html>

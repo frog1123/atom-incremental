@@ -1,8 +1,6 @@
 const runAtomForge = ({ speed }) => {
   player.atoms = player.atoms.add(player.atomForges.tier1.level.mul(player.atomForges.tier1.multiplier).div(speed));
   for (let i = 2; i <= 9; i++) atomForgeGenerate({ tier: i, speed });
-
-  const forges = player.atomForges;
 };
 
 const atomForgeGenerate = ({ tier, speed }) => {

@@ -12,14 +12,14 @@ const switchPage = page => {
 // sidebar open
 document.getElementById("sidebar-icon-btn").onclick = () => {
   document.getElementById("sidebar-container").style.transform = "translateX(0)";
-  document.getElementById("sidebar-container").style.boxShadow = "0 8px 24px #191919";
+  // document.getElementById("sidebar-container").style.boxShadow = "0 8px 24px #191919";
   document.getElementById("sidebar-shown-overlay").style.display = "block";
 };
 
 // sidebar close
 const closeSidebar = () => {
   document.getElementById("sidebar-container").style.transform = "translateX(-100%)";
-  document.getElementById("sidebar-container").style.boxShadow = "none";
+  // document.getElementById("sidebar-container").style.boxShadow = "none";
   document.getElementById("sidebar-shown-overlay").style.display = "none";
 };
 

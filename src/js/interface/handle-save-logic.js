@@ -8,7 +8,8 @@ exportBtn.onclick = () => {
 
   console.log(exportedSave);
   navigator.clipboard.writeText(exportedSave);
-  alert("save exported to clipboard");
+  // alert("save exported to clipboard");
+  displayNewToast("save exported to clipboard");
 };
 
 importBtn.onclick = () => {

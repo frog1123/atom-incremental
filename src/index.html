@@ -11,6 +11,7 @@
   <script src="js/core/player.js" defer></script>
   <script src="js/utils/format.js" defer></script>
   <script src="js/utils/convert-to-decimal.js" defer></script>
+  <script src="js/utils/toast.js" defer></script>
   <!-- * -->
   <script src="js/interface/update-atom-count.js" defer></script>
   <script src="js/interface/render-atom-forge-ui.js" defer></script>
@@ -27,6 +28,7 @@
 </head>
 
 <body class="bg-neutral-950" dir="ltr">
+  <div id="toast-container" class="fixed left-1/2 transform -translate-x-1/2 w-[300px] z-[30]"></div>
   <div id="page-main" class="page" style="display: block;">
     <div class="grid grid-flow-row w-full gap-2">
       <div class="w-max mx-auto mt-2">

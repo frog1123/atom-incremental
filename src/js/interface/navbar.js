@@ -1,13 +1,16 @@
 const navbar = document.getElementById("navbar");
+const navbarSeparator = document.getElementById("navbar-separator");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
-    navbar.classList.add("border-b-[1px]");
     navbar.classList.add("bg-glass");
-    navbar.classList.add("backdrop-blur");
+
+    navbarSeparator.classList.remove("w-0");
+    navbarSeparator.classList.add("w-full");
   } else {
-    navbar.classList.remove("border-b-[1px]");
     navbar.classList.remove("bg-glass");
-    navbar.classList.remove("backdrop-blur");
+
+    navbarSeparator.classList.remove("w-full");
+    navbarSeparator.classList.add("w-0");
   }
 });

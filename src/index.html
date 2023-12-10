@@ -32,7 +32,7 @@
   <div id="toast-container"
     class="fixed left-1/2 transform -translate-x-1/2 w-[300px] z-[30] grid grid-flow-row gap-2 mt-2">
   </div>
-  <nav id="navbar" class="top-0 fixed w-screen duration-200 ease-in-out border-border">
+  <nav id="navbar" class="top-0 fixed w-screen duration-200 ease-in-out backdrop-blur-lg">
     <div class="grid grid-cols-[1fr_auto_1fr] h-max place-items-center p-1">
       <div id="sidebar-icon-container" class="mr-auto">
         <button id="sidebar-icon-btn" class="grid place-items-center">
@@ -64,6 +64,7 @@
         </div>
       </div>
     </div>
+    <div id="navbar-separator" class="bg-border h-[1px] mx-auto w-0 duration-300 ease-in-out"></div>
   </nav>
   <div id="page-main" class="page" style="display: block;">
     <div class="grid grid-flow-row w-full gap-2">

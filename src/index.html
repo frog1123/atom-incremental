@@ -10,12 +10,14 @@
   <script src="js/core/break_eternity.min.js" defer></script>
   <script src="js/core/player.js" defer></script>
   <script src="js/utils/format.js" defer></script>
+  <script src="js/utils/convert-to-decimal.js" defer></script>
   <!-- * -->
   <script src="js/interface/update-atom-count.js" defer></script>
   <script src="js/interface/render-atom-forge-ui.js" defer></script>
   <script src="js/interface/update-atom-forge-ui.js" defer></script>
   <script src="js/interface/handle-atom-forge-buy.js" defer></script>
   <script src="js/interface/sidebar.js" defer></script>
+  <script src="js/interface/handle-save-logic.js" defer></script>
   <!-- * -->
   <script src="js/atom/run-atom-forge.js" defer></script>
   <script src="js/core/onload.js" defer></script>
@@ -47,9 +49,21 @@
     </div>
   </div>
   <div id="page-settings" class="page" style="display: none;">
-    <p class="text-white">you are on page 2</p>
+    <div class="w-full grid place-items-center h-screen">
+      <div class="w-max grid grid-flow-row gap-2">
+        <div class="grid grid-flow-col gap-2">
+          <button id="export-btn" class="bg-emerald-500 p-1 rounded-md hover:bg-emerald-700 transition cursor-pointer">
+            <span class="text-white text-xl">export save</span>
+          </button>
+          <button id="import-btn" class="bg-emerald-500 p-1 rounded-md hover:bg-emerald-700 transition cursor-pointer">
+            <span class="text-white text-xl">import save</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-  <div id="sidebar-shown-overlay" class="absolute z-[10] top-0 left-0 w-screen h-screen" style="display: none;"></div>
+  <div id="sidebar-shown-overlay" class="absolute z-[10] top-0 left-0 w-screen h-screen bg-black/50"
+    style="display: none;"></div>
   <div id="sidebar-icon-container" class="absolute z-[20] top-0 left-0">
     <button id="sidebar-icon-btn">
       <span class="text-white">

@@ -65,7 +65,7 @@ let player = {
       amountBought: new Decimal("0")
     }
   },
-  currentPage: "main",
+  currentPage: "page-settings",
   settings: {
     uiUpdateSpeed: 20
   },

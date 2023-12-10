@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="css/tailwind.css">
   <link rel="stylesheet" type="text/css" href="css/globals.css">
   <!-- high priority -->
@@ -85,10 +85,10 @@
       </div>
     </div>
   </div>
-  <div id="sidebar-shown-overlay" class="absolute z-[10] top-0 left-0 w-screen h-screen bg-black/50"
+  <div id="sidebar-shown-overlay" class="fixed z-[10] top-0 left-0 w-screen h-screen bg-black/50"
     style="display: none;"></div>
   <div id="sidebar-container"
-    class="absolute z-[20] top-0 left-0 h-screen p-4 bg-neutral-950 duration-300 ease-in-out w-[80%] sm:w-[300px] border-border border-r-[1px]"
+    class="fixed z-[20] top-0 left-0 h-screen p-4 bg-neutral-950 duration-300 ease-in-out w-[80%] sm:w-[300px] border-border border-r-[1px]"
     style="transform: translateX(-100%);">
     <div>
       <div class="grid grid-flow-col place-items-center">

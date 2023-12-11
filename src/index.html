@@ -36,10 +36,9 @@
     <div class="grid grid-cols-[1fr_auto_1fr] h-max place-items-center p-1">
       <div id="sidebar-icon-container" class="mr-auto">
         <button id="sidebar-icon-btn" class="grid place-items-center">
-          <span class="text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-menu">
+          <span class="text-white w-8 h-8">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
               <line x1="4" x2="20" y1="12" y2="12" />
               <line x1="4" x2="20" y1="6" y2="6" />
               <line x1="4" x2="20" y1="18" y2="18" />
@@ -50,10 +49,9 @@
       <div class="w-max mx-auto">
         <div class="grid grid-flow-col place-items-center gap-1">
           <span id="atom-count" class="text-white text-3xl font-bold">~</span>
-          <span class="text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-atom">
+          <span class="text-white w-8 h-8">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom">
               <circle cx="12" cy="12" r="1" />
               <path
                 d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" />
@@ -64,10 +62,42 @@
         </div>
       </div>
     </div>
-    <div id="navbar-separator" class="bg-border h-[1px] mx-auto w-0 duration-300 ease-in-out"></div>
+    <div id="navbar-separator" class="bg-border h-[1px] mx-auto w-0 duration-500 ease-in-out"></div>
   </nav>
   <div id="page-main" class="page" style="display: block;">
     <div class="grid grid-flow-row w-full gap-2">
+      <div class="grid grid-flow-row" style="display: none;">
+        <div class="p-1 grid gap-2 w-[calc(100vw-6px)] grid-flow-col grid-cols-[repeat(3,max-content)]">
+          <div class="w-max">
+            <div class="grid grid-flow-col gap-1 place-items-center w-max">
+              <span class="text-gray-500 w-4 h-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-orbit">
+                  <circle cx="12" cy="12" r="3" />
+                  <circle cx="19" cy="5" r="2" />
+                  <circle cx="5" cy="19" r="2" />
+                  <path d="M10.4 21.9a10 10 0 0 0 9.941-15.416" />
+                  <path d="M13.5 2.1a10 10 0 0 0-9.841 15.416" />
+                </svg>
+              </span>
+              <div class="bg-gray-500 px-1 rounded-md h-max">
+                <span class="block md:hidden text-black uppercase font-bold text-2xs sm:text-sm h-max">T1</span>
+                <span class="hidden md:block text-black uppercase font-bold text-2xs sm:text-sm h-max">Tier 1</span>
+              </div>
+              <span class="text-white text-xs sm:text-sm">Atom Forge</span>
+            </div>
+            <span class="text-white text-2xs sm:text-sm">1e123456789</span>
+          </div>
+          <div class="w-max grid place-items-center">
+            <span class="text-white text-xs font-semibold sm:text-sm">1e123456789</span>
+          </div>
+          <div class="w-max grid place-items-center">
+            <button>
+              <span class="text-white text-xs sm:text-xs">1e123456789</span>
+            </button>
+          </div>
+        </div>
+      </div>
       <div id="atom-forges-container" class="grid grid-flow-row"></div>
     </div>
   </div>
@@ -90,28 +120,25 @@
   <div id="sidebar-container"
     class="fixed z-[20] top-0 left-0 h-screen p-4 bg-neutral-950 duration-300 ease-in-out w-[80%] sm:w-[300px] border-border border-r-[1px]"
     style="transform: translateX(-100%);">
-    <div>
-      <div class="grid grid-flow-col place-items-center">
-        <p class="text-white mr-auto text-2xl">menu</p>
-        <button id="sidebar-close-btn" class="ml-auto">
-          <span class="text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-x">
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
-          </span>
-        </button>
-      </div>
-      <div class="grid grid-flow-row gap-1">
-        <button id="switch-to-page-main" class="mr-auto transition cursor-pointer text-gray-500 hover:text-white">
-          <span>page main</span>
-        </button>
-        <button id="switch-to-page-settings" class="mr-auto transition cursor-pointer text-gray-500 hover:text-white">
-          <span>settings</span>
-        </button>
-      </div>
+    <div class="grid grid-flow-col place-items-center">
+      <p class="text-white mr-auto text-2xl">menu</p>
+      <button id="sidebar-close-btn" class="ml-auto w-4 h-4">
+        <span class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="grid grid-flow-row gap-1">
+      <button id="switch-to-page-main" class="mr-auto transition cursor-pointer text-gray-500 hover:text-white">
+        <span>page main</span>
+      </button>
+      <button id="switch-to-page-settings" class="mr-auto transition cursor-pointer text-gray-500 hover:text-white">
+        <span>settings</span>
+      </button>
     </div>
 </body>
 
